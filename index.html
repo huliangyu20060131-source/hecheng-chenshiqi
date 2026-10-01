@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff7ed">
+  <title>合成陈诗绮</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="brand">
+      <p class="eyebrow">轻松一下</p>
+      <h1>合成陈诗绮</h1>
+      <p>让相同的小团子碰在一起，合成更大的伙伴。</p>
+    </header>
+
+    <section class="game-layout" aria-label="合成陈诗绮游戏">
+      <div class="board-wrap">
+        <canvas id="game" width="420" height="700" aria-label="游戏区域"></canvas>
+        <div class="game-over" id="gameOver" hidden>
+          <div class="over-card">
+            <span class="over-icon">✦</span>
+            <p>本局结束</p>
+            <strong id="finalScore">0</strong>
+            <button id="againButton" type="button">再来一局</button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="panel">
+        <div class="stats">
+          <div class="stat"><span>本局分数</span><strong id="score">0</strong></div>
+          <div class="stat"><span>最高纪录</span><strong id="best">0</strong></div>
+        </div>
+
+        <div class="next-card">
+          <span>下一个</span>
+          <div class="next-orb" id="nextOrb" aria-hidden="true"><b>◆</b></div>
+        </div>
+
+        <div class="actions">
+          <button id="soundButton" type="button">声音：开</button>
+          <button id="restartButton" type="button">重新开始</button>
+        </div>
+
+        <div class="tips">
+          <strong>怎么玩</strong>
+          <p>移动鼠标或手指瞄准，松开投放。两个同色团子相碰会升级。</p>
+          <p><kbd>←</kbd><kbd>→</kbd> 移动　<kbd>空格</kbd> 投放　<kbd>R</kbd> 重开</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
